@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/html">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="css/main.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Encode+Sans+Semi+Condensed&display=swap" rel="stylesheet">
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.3/jquery.validate.min.js"></script>
+  <title>Магазин Іграшок</title>
+  <style>
+    body {
+      background-image: url('img/myphoto.png');
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-position: center center;
+    }
+  </style>
+  <meta property="og:title" content="Магазин Іграшок">
+  <meta property="og:description" content="Магазин Іграшок">
+  <meta name="description" content="Магазин Іграшок. Якість та розваги" />
+  <meta property="og:url" content="www.toysshop.in.ua">
+  <meta property="og:type" content="site">
+  <meta property="og:locale" content="ua_UA">
+  <meta property="og:site_name" content="Магазин Іграшок">
+  <meta property="og:image" content="https://img.freepik.com/premium-vector/medical-center-logo_648803-192.jpg?w=740">
+  <link rel="icon" href="favicon.ico">
+</head>
+<body>
+<script src="js/main.js"></script>
+<header>
+  <picture>
+    <source media="(min-width: 1200px)" srcset="large.jpg">
+    <source media="(min-width: 900px)" srcset="medium.jpg">
+    <source media="(min-width: 600px)" srcset="tile.png">
+    <img src="tile.png" srcset="tile.png 600w, medium.jpg 900w, large.jpg 1200w" alt="">
+  </picture>
+
+  <div id="menu">
+    <h1>Магазин Іграшок</h1>
+    <ul>
+      <li><a href="#about-shop">Магазин Іграшок</a></li>
+      <li><a href="#services">Ми пропонуємо</a></li>
+      <li><a href="#staff">Наші співробітники</a></li>
+      <li><a href="#about-us">Про нас</a></li>
+      <li><a href="#contact-us">Зателефонуйте нам</a></li>
+      <button class="menu-button" id="open-register-lightbox"><i class="fas fa-user-plus"></i> Зареєструватись</button>
+      <button class="menu-button" id="open-login-lightbox"><i class="fas fa-sign-in-alt"></i> Вхід</button>
+    </ul>
+  </div>
+
+  <div id="lightbox-overlay"></div>
+
+  <div id="lightbox-register" class="lightbox-content">
+    <h2>Реєстрація</h2>
+    <form id="register-form">
+      <label for="register-username">Логін:</label>
+      <input type="text" id="register-username" name="register-username"><br> <!-- Змінено id="username" на id="register-username" -->
+
+      <label for="register-email">Email:</label>
+      <input type="email" id="register-email" name="register-email"><br> <!-- Змінено id="email" на id="register-email" -->
+
+      <label for="register-password">Пароль:</label>
+      <input type="password" id="register-password" name="register-password"><br> <!-- Змінено id="password" на id="register-password" -->
+
+      <label for="confirm-password">Підтвердження пароля:</label> <!-- Перейменовано поле підтвердження пароля -->
+      <input type="password" id="confirm-password" name="confirm-password"><br> <!-- Змінено id="confirmPassword" на id="confirm-password" -->
+
+      <button id="close-register-lightbox" class="close-button">×</button>
+      <button>Зареєструватись</button>
+    </form>
+  </div>
+
+
+  <div id="lightbox-login" class="lightbox-content">
+    <h2>Вхід до акаунту</h2>
+    <form>
+      <label for="login-username">Логін:</label>
+      <input type="text" id="login-username" name="login-username"><br>
+
+      <label for="login-password">Пароль:</label>
+      <input type="password" id="login-password" name="login-password"><br>
+      <button id="close-login-lightbox" class="close-button">×</button>
+      <button>Увійти</button>
+    </form>
+  </div>
+
+</header>
+
+<!-- Main section -->
+
+  <section>
+    <h2 id="services">Наші послуги</h2>
+    <ul>
+      <li>Приємні ціни</li>
+      <li>Швидка доставка</li>
+      <li>Консультації з підбору іграшок</li>
+      <li>Підтримка</li>
+    </ul>
+  </section>
+
+  <article>
+    <h2 id="staff">Наші співробітники та чому обирають нас?</h2>
+    <ol>
+      <li>
+        <h3>Хто ми такі?</h3>
+        <ul>
+          <li>Команда мрійників: Розкажіть про те, як ваші співробітники люблять свою роботу і як вони бачать себе частиною дивовижного світу іграшок.</li>
+          <li>Професіонали своєї справи: Підкресліть досвід та знання ваших співробітників у сфері дитячих товарів.</li>
+          <li>Друзі ваших дітей: Покажіть, що ваші співробітники – це не просто продавці, а справжні друзі для дітей та їхніх батьків.</li>
+        </ul>
+      </li>
+      <li>
+        <h3>Чому обирають нас?</h3>
+        <ul>
+          <li>Індивідуальний підхід: Опишіть, як ваші співробітники допомагають клієнтам підібрати ідеальний подарунок для дитини, враховуючи її інтереси та вік.</li>
+          <li>Знання про іграшки: Розкажіть про те, як ваші співробітники постійно вдосконалюють свої знання про нові іграшки та тренди на ринку.</li>
+          <li>Сервіс найвищого рівня: Підкресліть, що для вас важливо, щоб кожен клієнт почувався особливим.</li>
+        </ul>
+      </li>
+      <li>
+        <h3>Що ми любимо?</h3>
+        <ul>
+          <li>Діти та їхні посмішки: Покажіть, що ваші співробітники отримують справжнє задоволення від спілкування з дітьми та бачать їх радість від нових іграшок.</li>
+          <li>Світ іграшок: Розкажіть про те, що для вас іграшки – це не просто товар, а можливість творити диво і дарувати радість.</li>
+          <li>Розвиток: Опишіть, як ваша команда постійно розвивається і вчиться новому.</li>
+        </ul>
+      </li>
+    </ol>
+  </article>
+
+  <article>
+    <h2 id="about-us">Про нас</h2>
+    <p>
+      Ми – команда ентузіастів, які вірять у силу іграшок. Для нас, іграшки – це не просто товари, а двері в світ фантазії, розвитку та радості. Ми прагнемо створити атмосферу, де кожна дитина зможе знайти іграшку, яка відповідає її інтересам та допомагає розвиватися.
+    </p>
+    <h2 class="sub-title">Наша місія</h2>
+    <p>
+      Місія – дарувати дітям радість та сприяти їхньому всебічному розвитку через якісні та безпечні іграшки. Ми прагнемо створити місце, де кожна дитина зможе знайти свого ідеального ігрового компаньйона.
+    </p>
+
+    <h2 class="sub-title">Команда</h2>
+    <p>
+      Наша команда складається з досвідчених фахівців, які люблять дітей та все, що з ними пов'язано. Ми постійно відстежуємо новинки на ринку іграшок та обираємо тільки найкращі продукти для наших клієнтів.
+    </p>
+  </article>
+
+<article id="contact-us">
+  <h2 class="section-title">Зв'яжіться з нами</h2>
+  <div class="contact-info">
+    <p><strong>Instagram:</strong> @HealthyCareMedicalCenter</p>
+    <p><strong>Телефон:</strong> +1-555-123-4567</p>
+    <p><strong>Email:</strong> info@healthycaremedicalcenter.com</p>
+    <p><strong>Telegram:</strong> @HealthyCareMC</p>
+  </div>
+</article>
+
+</main>
+<!-- Footer -->
+<!--<footer class="site-footer">
+  <div class="footer-content">
+    <div class="footer-logo">
+      <img src="favic16.jpg" alt="Логотип сайту">
+    </div>
+  </div>-->
+  <div class="copyright">
+    &copy; 2024 Магазин Іграшок Surhan Andriy IN-12 Site. All rights reserved.
+  </div>
+</footer>
+</body>
+</html>

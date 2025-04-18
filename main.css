@@ -1,0 +1,314 @@
+html {
+  color: #222;
+  font-size: 1em;
+  line-height: 1.4;
+}
+
+h1 {
+  font-family: 'Quicksand', sans-serif;
+  font-weight: 600;
+  color: #333;
+  font-size: 2em;
+  text-align: center;
+  margin-left: 20px;
+}
+
+h2 {
+  font-family: 'Quicksand', sans-serif;
+  font-weight: 400;
+  color: #333;
+  font-size: 1.5em;
+  text-align: left;
+  margin-left: 20px;
+}
+
+p {
+  font-family: 'Quicksand', sans-serif; /* Основний текст також використовує шрифт Quicksand */
+  font-weight: 400; /* Товщина шрифту основного тексту */
+  color: #333;
+  font-size: 1em;
+  text-align: justify; /* Встановлюйте відповідне вирівнювання тексту */
+  line-height: 1.5; /* Міжрядковий інтервал для основного тексту */
+  margin-left: 5px;
+}
+
+a {
+  color: #0066cc; /* Колір тексту посилання */
+  text-decoration: none; /* Видалення підкреслення */
+  font-weight: bold; /* Товщина шрифту тексту посилання */
+}
+
+a:hover {
+  color: #ff0000; /* Колір тексту посилання при наведенні */
+  text-decoration: underline; /* Додавання підкреслення при наведенні */
+}
+
+a:visited {
+  color: #800080; /* Колір тексту для вже відвіданих посилань */
+}
+
+div {
+  margin: 2px 10px 2px 10px; /* top right bottom left */
+}
+/* Додайте відступ всередині елемента*/
+div {
+  padding: 2px 10px 2px 10px;
+}
+img {
+  max-width: 100%;
+  height: auto;
+}
+/* Горизонтальне вирівнювання тексту */
+div {
+  text-align: left;
+}
+
+/* Вертикальне вирівнювання вмісту (приклад для таблиці) */
+td {
+  vertical-align: middle; /* Вирівнює вміст по вертикалі в середині комірки таблиці */
+}
+
+/* Вирівнювання елементів в flex контейнері */
+div {
+  display: flex;
+  align-items: center; /* Вирівнює дочірні елементи по вертикалі в середині flex контейнера */
+}
+
+/* Вирівнювання елементів в grid контейнері */
+div {
+  display: grid;
+  align-content: center; /* Вирівнює дочірні елементи по вертикалі в середині grid контейнера */
+}
+
+div {
+  display: block; /* Елемент буде відображатися як блок, який займає повний рядок */
+}
+
+.box {
+  width: 300px;
+  padding: 10px;
+  border: 2px solid black;
+  margin: 20px;
+}
+
+.container {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto; /* центрування контейнера */
+}
+
+.sidebar {
+  width: 30%;
+  float: left;
+}
+
+.main-content {
+  width: 70%;
+  float: left;
+}
+
+/* Медіа-запит для екранів менше 600px */
+@media (max-width: 600px) {
+  .sidebar, .main-content {
+    width: 60%;
+    float: none;
+  }
+}
+
+@media (min-width: 601px) and (max-width: 767px) {
+  body {
+    font-size: 1.1em;
+  }
+}
+
+/* Десктопні екрани (ширина більше 1200px) */
+@media (min-width: 1200px) {
+  .sidebar, .main-content {
+    width: 100%;
+    float: none;
+
+    /* Наприклад, можливі стилі для великих екранів */
+
+    .container {
+      max-width: 1200px;
+    }
+  }
+
+  /* Планшети (ширина від 992px до 1199px) */
+  @media (min-width: 992px) and (max-width: 1199px) {
+    /* Додайте ваші стилі для планшетів тут */
+    /* Наприклад, зменшити ширину бокової панелі на планшетах */
+    .sidebar {
+      width: 20%;
+    }
+
+    .main-content {
+      width: 80%;
+    }
+  }
+
+  /* Малі планшети (ширина від 768px до 991px) */
+  @media (min-width: 768px) and (max-width: 991px) {
+    .sidebar, .main-content {
+      width: 85%;
+      float: none;
+
+      /* Наприклад, змініть розміри шрифтів на малих планшетах */
+
+      :is(body) {
+        font-size: 16px;
+      }
+
+      /* Зробіть секції "Our staff" та "About us" однією колонкою */
+
+      .staff, .about-us {
+        width: 100%;
+      }
+    }
+    /* Наприклад, приховати бокове меню на мобільних пристроях */
+    #menu {
+      display: none;
+    }
+  }
+  /* Стилі для пристроїв з високою роздільною здатністю */
+  @media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+    /* Тут можуть бути правила для зображень вищої якості або додаткові стилі */
+  }
+
+  /* Стилі для пристроїв з низькою роздільною здатністю */
+  @media (-webkit-max-device-pixel-ratio: 1.5), (max-resolution: 192dpi) {
+    /* Тут можуть бути правила для зображень низької якості або додаткові стилі */
+  }
+}
+/* Застосування стилів на основі орієнтації пристрою (вертикальна орієнтація) */
+@media (orientation: portrait) {
+  body {
+    font-size: 1.2em;
+  }
+}
+/* Застосування стилів для різних типів пристроїв (Стилі лише для друкованих версій) */
+@media print {
+  body {
+    color: black;
+    background: white;
+  }
+}
+
+#menu {
+  margin-left: 0; /* Прибрано відступ зліва у панелі меню */
+  background-color: #FFA500;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 10px;
+  box-sizing: border-box;
+  text-align: center;
+}
+
+#menu h1 {
+  font-size: 24px;
+  color: #00f;
+  margin: 0;
+}
+
+#menu ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: space-between;
+  padding: 10px 0;
+}
+
+#menu li {
+  flex: 1;
+  margin-right: 10px;
+  border: 2px solid #FF8C00; /* Змінено колір меж на темнооранжевий (#FF8C00) */
+}
+
+#menu a {
+  text-decoration: none;
+  color: #fff; /* Змінено колір тексту на білий (#fff) */
+  padding: 10px 0;
+  background-color: #800080; /* Змінено колір фону на світлофіолетовий (#800080) */
+  display: block;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+#menu a:hover {
+  background-color: #fff;
+  color: #800080;
+}
+
+/* Змінення стилів для надпису "copyright" */
+/* Змінення стилів для надпису "copyright" */
+div.copyright {
+  background-color: #FFA500; /* Оранжевий фон */
+  color: #800080; /* Фіолетовий текст */
+  padding: 10px; /* Додаткові внутрішні відступи для панелі */
+  text-align: center; /* Центрування тексту */
+  width: 100%; /* Розтягує панель на всю ширину сайту */
+  margin-left: 0; /* Прибрано відступ зліва в нижній панелі */
+}
+
+/* Стилі для overlay (перекриваючого шару) */
+.lightbox-content {
+  display: none;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: #fff;
+  padding: 20px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+  z-index: 1;
+}
+
+#lightbox-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  display: none;
+}
+/* Стилі для кнопки закриття лайтбоксу */
+/* Стилі для кнопки закриття лайтбоксу */
+#close-register-lightbox, #close-login-lightbox {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  font-size: 20px;
+  cursor: pointer;
+  color: #333;
+}
+.menu-button {
+  text-decoration: none;
+  color: #fff;
+  padding: 10px 0;
+  background-color: #800080;
+  display: block;
+  transition: background-color 0.3s, color 0.3s;
+  flex: 1;
+  margin-right: 10px;
+  border: 2px solid #FF8C00;
+  font-size: 16px; /* Додайте розмір шрифту для кнопок */
+  display: flex;
+  align-items: center; /* Вирівнюємо текст і іконку по вертикалі */
+  justify-content: center; /* Вирівнюємо текст і іконку по горизонталі */
+}
+
+.menu-button i {
+  margin-right: 5px; /* Додайте відступ між іконкою і текстом кнопки */
+}
+
+.menu-button:hover {
+  background-color: #fff;
+  color: #800080;
+}
+
+.show {
+  display: block;
+}
